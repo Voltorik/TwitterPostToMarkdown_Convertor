@@ -1,6 +1,17 @@
 # Twitter post to .md convertor
 Takes a post's url as a variable and outputs that post in a .md file. The name of the file is the first 40 characters of the first sentence. Any invalid characters are replaced with a `%`. 
 
+## Run the script
+```
+py convertor.py url
+```
+where `url` is the post url. 
+
+Ex:
+```
+py convertor.py https://x.com/Voltorik_/status/1792255489427787859
+```
+
 ## Tools used 
 Leverages [Selenium](https://www.selenium.dev/) (web browser automation tool)
 - Used to run the instance of a headless browser.
