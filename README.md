@@ -1,11 +1,15 @@
 # Twitter post to .md convertor
 Takes a post's url as a variable and outputs that post in a .md file. The name of the file is the first 40 characters of the first sentence. Any invalid characters are replaced with a `%`. 
 
-## Run the script
-```
-py convertor.py url
-```
-where `url` is the post url. 
+## Running the script
+Prereqs: 
+- Python 3.x
+- Selenium
+- Configured WebDriver (I use firefox configs in the code)
+- Setup & activate a virtual environment (Optional)
+- Then install dependencies `pip install -r requirements.txt`
+
+Then run `py convertor.py url` where `url` is the url of the twitter post. 
 
 Ex:
 ```
@@ -23,7 +27,7 @@ Leverages [Selenium](https://www.selenium.dev/) (web browser automation tool)
 ## Script execution steps
 1. Starts up a new headless browser and waits until the `tweetText` div is loaded.
 2. Extracts content as mentioned above.
-3. Splits `User-Name` data into seperate pieces.
+3. Splits `User-Name` data into separate pieces.
 4. Converts the `time` attribute into a new string format. Ex: `(Sunday) May 19, 2024 - 06:06 PM`
 5. Assigns the file name. Spilts by `.`, then takes the first 40 characters of sentence. Replaces any invalid chars with `%`.
 6. Generates a new .md file.
@@ -31,7 +35,7 @@ Leverages [Selenium](https://www.selenium.dev/) (web browser automation tool)
 ## File output template
 _displayName_ (_@username_)
 
-_formatedTimeStamp_
+_formattedTimeStamp_
 
 _tweetContent_
 
