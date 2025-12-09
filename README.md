@@ -1,6 +1,8 @@
 # Twitter post to .md convertor
 Takes a post's url as a variable and outputs that post in a .md file. The name of the file is the first 40 characters of the first sentence. Any invalid characters are replaced with a `%`. 
 
+I wanted a quick way to archive posts locally in a universal format. 
+
 ## Running the script
 Prereqs: 
 - Python 3.x
